@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/VocabularyReact/static/css/main.5b49f329.css",
+    "main.js": "/VocabularyReact/static/js/main.7067401b.js",
+    "static/media/books-1280.png": "/VocabularyReact/static/media/books-1280.fffc53c2c12f7827ed0e.png",
+    "static/media/dark-books.png": "/VocabularyReact/static/media/dark-books.7fb3dfde512a96636a84.png",
+    "static/media/logo.png": "/VocabularyReact/static/media/logo.ac21242daebeca5d585c.png",
+    "static/media/spinner.gif": "/VocabularyReact/static/media/spinner.11d9cde8ebaeadb07ba7.gif",
+    "index.html": "/VocabularyReact/index.html",
+    "main.5b49f329.css.map": "/VocabularyReact/static/css/main.5b49f329.css.map",
+    "main.7067401b.js.map": "/VocabularyReact/static/js/main.7067401b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b49f329.css",
+    "static/js/main.7067401b.js"
+  ]
+}
