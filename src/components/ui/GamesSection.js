@@ -8,14 +8,14 @@ const GamesSection = () => {
         <h1>Pick a game and learn by playing.</h1>
       </div>
       <div className="games-menu">
-        <a href="vocabularyreact/memory-game" className="gm-card hero-card">
+        <a href="/memory-game" className="gm-card hero-card">
           <h3>Memory Game</h3>
           <p>
             Practice vocabulary and strengthen neural connections with this
             timeless classic.
           </p>
         </a>
-        <a href="vocabularyreact/letter-soup" className="gm-card hero-card">
+        <a href="/letter-soup" className="gm-card hero-card">
           <h3>Letter Soup</h3>
           <p>
             Relax by practicing vocabulary while sipping your favourite
