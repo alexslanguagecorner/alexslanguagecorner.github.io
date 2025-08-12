@@ -1,6 +1,6 @@
 {
   "name": "vocabulary",
-  "homepage": "https://olgamadej.github.io/VocabularyReact",
+  "homepage": "https://alexslanguagecorner.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +15,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.6.3",
-    "react-scripts": "^0.0.0",
+    "react-scripts": "^5.0.1",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.77.6",
     "web-vitals": "^2.1.4"

@@ -56,7 +56,7 @@ function App() {
 
         <Routes>
           <Route
-            path="/VocabularyReact"
+            path="/"
             element={
               <>
                 <div className="hero-section">
@@ -81,12 +81,9 @@ function App() {
             }
           />
 
+          <Route path="/memory-game" element={<MemoryGame items={items} />} />
           <Route
-            path="/VocabularyReact/memory-game"
-            element={<MemoryGame items={items} />}
-          />
-          <Route
-            path="/VocabularyReact/letter-soup"
+            path="/letter-soup"
             element={<LetterSoupSetup items={items} />}
           />
         </Routes>
