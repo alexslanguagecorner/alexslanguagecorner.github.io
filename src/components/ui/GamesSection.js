@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./GamesSection.scss";
 
 const GamesSection = () => {
@@ -8,20 +9,21 @@ const GamesSection = () => {
         <h1>Pick a game and learn by playing.</h1>
       </div>
       <div className="games-menu">
-        <a href="/memory-game" className="gm-card hero-card">
+        <Link to="/memory-game" className="gm-card hero-card">
           <h3>Memory Game</h3>
           <p>
             Practice vocabulary and strengthen neural connections with this
             timeless classic.
           </p>
-        </a>
-        <a href="/letter-soup" className="gm-card hero-card">
+        </Link>
+        <Link to="/letter-soup" className="gm-card hero-card">
           <h3>Letter Soup</h3>
           <p>
-            Relax by practicing vocabulary while sipping your favourite
-            bavarage.
+            {/*Relax by practicing vocabulary while sipping your favourite
+            bavarage.*/}
+            This game and other ones are coming soon.
           </p>
-        </a>
+        </Link>
       </div>
       <div className="sub-about"></div>
     </div>

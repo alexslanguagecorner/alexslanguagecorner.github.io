@@ -12,10 +12,19 @@ const ContentMenu = () => {
             fluency.
           </p>
         </div>
-        <a href="#games-section" className="content-top-middle hero-card">
+        <div
+          onClick={() => {
+            document
+              .getElementById("games-section")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="content-top-middle hero-card"
+          role="button"
+          tabIndex={0}
+        >
           <h3>Learn by Playing</h3>
           <p>Pick a topic and sharpen your vocabulary with my quick games.</p>
-        </a>
+        </div>
         <div className="content-top-right hero-card">
           <h3>Vocabulary Search</h3>
           <p>Find expressions easily with my interactive search tool.</p>

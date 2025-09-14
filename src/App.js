@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import MemoryGame from "./components/games/memory/MemoryGame";
 import LetterSoupSetup from "./components/ui/LetterSoupSetup";
 import Header from "./components/ui/Header";
