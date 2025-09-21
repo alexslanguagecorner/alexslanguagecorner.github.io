@@ -1,58 +1,58 @@
-@import '../../scss/config';
+@import "../../scss/config";
 
 .center {
   display: flex;
   flex-direction: column;
-  padding: 3rem 0.2rem;
+  padding: 3rem 2rem;
   align-items: center;
   justify-content: center;
   color: $light-beige;
   transform: translateY(-1rem);
 
   .logo-container {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
 
     .logo-first-line {
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
 
-        h2 {
-            letter-spacing: 4px;
+      h2 {
+        letter-spacing: 4px;
+      }
+
+      h1 {
+        letter-spacing: 4px;
+        font-weight: 500;
+      }
+
+      .logo {
+        height: 240px;
+
+        img {
+          height: 100%;
+          width: 100%;
         }
-
-        h1 {
-            letter-spacing: 4px;
-            font-weight: 500;
-        }
-
-        .logo {
-            height: 240px;
-
-            img {
-                height: 100%;
-                width: 100%;
-          }
-        }
+      }
     }
     .logo-second-line {
-        justify-self: end;
+      justify-self: end;
 
-        h1 {
-            font-weight: 500;
-        }
+      h1 {
+        font-weight: 500;
+      }
     }
   }
   .sub-tagline {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    flex-wrap: wrap;
 
     h3 {
-        letter-spacing: 2.5px;
+      letter-spacing: 2.5px;
     }
-  }  
+  }
 
   .sub-about {
     padding-top: 3rem;
@@ -62,34 +62,44 @@
     justify-content: center;
 
     .free-materials-button {
-        font-family: "Cormorant", sans-serif;
-        font-weight: 500;
-        font-size: 1rem;
-        padding: 0.5rem 1.7rem;
-        background-color: $beige;
-        border: none;
-        border-radius: 4px;
+      font-family: "Cormorant", sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.5rem 1.7rem;
+      background-color: $beige;
+      border: none;
+      border-radius: 4px;
     }
 
     .content-menu-text {
-        padding: 2.5rem 0;
-        text-align: center;
-        font-size: 1.09rem;
+      padding: 2.5rem 0;
+      text-align: center;
+      font-size: 1.09rem;
 
-        span {
-            display: block;
-            width: 100%;
-            text-align: right;
-        }
+      span {
+        display: block;
+        width: 100%;
+        text-align: right;
+      }
     }
+  }
 }
-}
-
-
 
 // Responsive Styles
 @media (min-width: 640px) {
-    .logo {
-        margin-bottom: 0;
+  .logo {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 880px) {
+  .center {
+    .logo-container {
+      .logo-first-line {
+        .logo {
+          height: 160px;
+        }
+      }
     }
+  }
 }

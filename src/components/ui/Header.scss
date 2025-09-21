@@ -9,7 +9,6 @@ $bg-dark: rgb(87, 75, 68);
 
 .header {
   position: sticky;
-  background-color: rgba(255, 255, 0, 0.2);
   top: 0;
   z-index: 100;
   width: 100%;
@@ -26,6 +25,7 @@ $bg-dark: rgb(87, 75, 68);
   }
 
   .menu-btn {
+    margin: 0 0.5rem;
     color: $light-beige;
     text-decoration: none;
     font-size: 1rem;

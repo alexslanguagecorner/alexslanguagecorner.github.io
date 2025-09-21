@@ -84,18 +84,34 @@
   padding: 0 2rem;
   margin: 0;
 }
+.header .menu {
+  gap: 1.5rem;
+  align-items: center;
+}
+.header .menu-btn {
+  color: rgb(231, 216, 186);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+.header .menu-btn:hover {
+  color: rgb(187, 180, 174);
+}
 .header .burger {
   width: 2rem;
   height: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
   cursor: pointer;
   z-index: 200;
 }
 .header .burger span {
   display: block;
-  height: 2px;
+  height: 3px;
   width: 100%;
   background: rgb(231, 216, 186);
   border-radius: 2px;
@@ -113,6 +129,7 @@
 }
 .header .overlay {
   position: fixed;
+  inset: 0;
   top: 0;
   left: 0;
   height: 100vh;
@@ -124,12 +141,17 @@
   align-items: center;
   gap: 2rem;
   z-index: 150;
+  padding: 2rem;
 }
 .header .overlay .overlay-item {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
   color: rgb(231, 216, 186);
   font-size: 2rem;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   transition: transform 0.3s ease;
 }
 .header .overlay .overlay-item:hover {
@@ -144,6 +166,7 @@
   .header {
     justify-content: space-between;
     padding: 0 2rem;
+    /* ensure overlay cannot cover desktop even if accidentally open */
   }
   .header .burger {
     display: none;
@@ -151,6 +174,11 @@
   .header .menu,
   .header .buttons {
     display: flex;
-    gap: 2rem;
+  }
+  .header .menu-btn {
+    font-size: 1.1rem;
+  }
+  .header .overlay {
+    display: none !important;
   }
 }/*# sourceMappingURL=main.css.map */

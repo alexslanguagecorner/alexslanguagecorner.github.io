@@ -72,7 +72,6 @@ a {
   flex-direction: row;
   justify-content: space-between; /* MainTitle left, ContentMenu right */
   align-items: center; /* Vertically align if needed */
-  gap: 10rem;
   width: 100%;
 }
 
@@ -145,39 +144,7 @@ a {
   padding-bottom: 10px;
 }
 
-@media (max-width: 880px) {
-  html,
-  body {
-  }
-
-  body {
-    background: url("img/dark-books.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-}
-
-@media (max-width: 1280px) {
-  html,
-  body {
-  }
-
-  body {
-    background: url("img/books-1280.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-}
-
 @media (max-width: 1980px) {
-  html,
-  body {
-  }
-
   body {
     background: url("img/books-1280.png");
     background-repeat: no-repeat;
@@ -191,7 +158,36 @@ a {
   }
 }
 
+@media (max-width: 880px) {
+  body {
+    background: url("img/dark-books.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .hero-card {
+    height: 13rem;
+    width: 2rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  body {
+    background: url("img/books-1280.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
 @media (max-width: 800px) {
+  .hero-section {
+    flex-direction: column;
+  }
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }

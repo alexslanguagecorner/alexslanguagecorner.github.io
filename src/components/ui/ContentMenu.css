@@ -1,7 +1,8 @@
 .content-menu-container {
   transform: translateY(-2rem);
 }
-.content-menu-container .content-menu-left, .content-menu-container .content-menu-right {
+.content-menu-container .content-menu-left,
+.content-menu-container .content-menu-right {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -9,7 +10,7 @@
 }
 .content-menu-container .hero-card {
   height: 12rem;
-  width: 11rem;
+  width: 9rem;
   padding: 1rem;
   background-color: rgba(231, 216, 186, 0.8);
   margin: 0.5rem;
@@ -23,4 +24,12 @@
 .content-menu-container .hero-card p {
   font-weight: 500;
   text-align: center;
+}
+/* Media Queries */
+@media (max-width: 880px) {
+  .content-menu-container .content-menu-right .hero-card,
+  .content-menu-container .content-menu-left .hero-card {
+    width: 9rem;
+    height: 13rem;
+  }
 }/*# sourceMappingURL=ContentMenu.css.map */
