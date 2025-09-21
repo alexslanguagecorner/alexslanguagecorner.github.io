@@ -20,18 +20,37 @@ $bg-dark: rgb(87, 75, 68);
   padding: 0 2rem;
   margin: 0;
 
+  .menu {
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .menu-btn {
+    color: $light-beige;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $light_grey;
+    }
+  }
+
   .burger {
     width: 2rem;
     height: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: none;
     cursor: pointer;
     z-index: 200; // above overlay
 
     span {
       display: block;
-      height: 2px;
+      height: 3px;
       width: 100%;
       background: $light-beige;
       border-radius: 2px;
@@ -39,55 +58,79 @@ $bg-dark: rgb(87, 75, 68);
     }
 
     &.open span:nth-child(1) {
-      transform: rotate(45deg) translateY(6px);
+      color: red;
+      transform: rotate(45deg) translateY(15px);
     }
     &.open span:nth-child(2) {
       opacity: 0;
     }
     &.open span:nth-child(3) {
-      transform: rotate(-45deg) translateY(-6px);
+      transform: rotate(-45deg) translateY(-15px);
     }
   }
 
-  .menu {
+  .overlay {
+    position: fixed;
+    inset: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: $bg-dark;
     display: flex;
-    gap: 3rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 150;
+    padding: 2rem;
+
+    .overlay-item {
+      display: block;
+      width: 100%;
+      max-width: 720px;
+      text-align: center;
+      color: $light-beige;
+      font-size: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        color: $light_grey;
+      }
+    }
   }
 
+  // hide default menu/buttons on mobile
+  .menu,
   .buttons {
-    display: flex;
-    gap: 3rem;
-    margin-top: 0;
-  }
-
-  .menu-btn {
-    text-align: center;
-    color: $light-beige;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      color: $light_grey;
-      scale: 1.15;
-    }
+    display: none;
   }
 }
 
-// Responsive Styles
-@media (min-width: 640px) {
+// show original header menu on larger screens
+@media (min-width: 768px) {
   .header {
-    flex-wrap: nowrap;
-    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
 
+    .burger {
+      display: none;
+    }
+
+    .menu,
     .buttons {
-      width: auto;
-      margin-top: 0;
+      display: flex;
     }
 
     .menu-btn {
-      flex: none;
+      font-size: 1.1rem;
+    }
+
+    /* ensure overlay cannot cover desktop even if accidentally open */
+    .overlay {
+      display: none !important;
     }
   }
 }

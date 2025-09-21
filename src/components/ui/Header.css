@@ -11,64 +11,101 @@
   padding: 0 2rem;
   margin: 0;
 }
+.header .menu {
+  gap: 1.5rem;
+  align-items: center;
+}
+.header .menu-btn {
+  color: rgb(231, 216, 186);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+.header .menu-btn:hover {
+  color: rgb(187, 180, 174);
+}
 .header .burger {
   width: 2rem;
   height: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
   cursor: pointer;
   z-index: 200;
 }
 .header .burger span {
   display: block;
-  height: 2px;
+  height: 3px;
   width: 100%;
   background: rgb(231, 216, 186);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 .header .burger.open span:nth-child(1) {
-  transform: rotate(45deg) translateY(6px);
+  color: red;
+  transform: rotate(45deg) translateY(15px);
 }
 .header .burger.open span:nth-child(2) {
   opacity: 0;
 }
 .header .burger.open span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-6px);
+  transform: rotate(-45deg) translateY(-15px);
 }
-.header .menu {
+.header .overlay {
+  position: fixed;
+  inset: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(87, 75, 68);
   display: flex;
-  gap: 3rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  z-index: 150;
+  padding: 2rem;
 }
-.header .buttons {
-  display: flex;
-  gap: 3rem;
-  margin-top: 0;
-}
-.header .menu-btn {
+.header .overlay .overlay-item {
+  display: block;
+  width: 100%;
+  max-width: 720px;
   text-align: center;
   color: rgb(231, 216, 186);
+  font-size: 2rem;
   text-decoration: none;
-  font-size: 1.2rem;
-  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+  transition: transform 0.3s ease;
 }
-.header .menu-btn:hover {
+.header .overlay .overlay-item:hover {
   color: rgb(187, 180, 174);
-  scale: 1.15;
+}
+.header .menu,
+.header .buttons {
+  display: none;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .header {
-    flex-wrap: nowrap;
-    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    /* ensure overlay cannot cover desktop even if accidentally open */
   }
+  .header .burger {
+    display: none;
+  }
+  .header .menu,
   .header .buttons {
-    width: auto;
-    margin-top: 0;
+    display: flex;
   }
   .header .menu-btn {
-    flex: none;
+    font-size: 1.1rem;
+  }
+  .header .overlay {
+    display: none !important;
   }
 }/*# sourceMappingURL=Header.css.map */

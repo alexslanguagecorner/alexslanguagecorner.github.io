@@ -73,49 +73,84 @@
 
 .header {
   position: sticky;
+  background-color: rgba(255, 255, 0, 0.2);
   top: 0;
   z-index: 100;
-  height: 3.7rem;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  height: 3.7rem;
   padding: 0 2rem;
   margin: 0;
 }
-.header .menu {
+.header .burger {
+  width: 2rem;
+  height: 1.5rem;
   display: flex;
-  gap: 3rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 200;
 }
-.header .buttons {
+.header .burger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: rgb(231, 216, 186);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.header .burger.open span:nth-child(1) {
+  color: red;
+  transform: rotate(45deg) translateY(15px);
+}
+.header .burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.header .burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-15px);
+}
+.header .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(87, 75, 68);
   display: flex;
-  gap: 3rem;
-  margin-top: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  z-index: 150;
 }
-.header .menu-btn {
-  text-align: center;
+.header .overlay .overlay-item {
   color: rgb(231, 216, 186);
+  font-size: 2rem;
   text-decoration: none;
-  font-size: 1.2rem;
-  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  transition: transform 0.3s ease;
 }
-.header .menu-btn:hover {
+.header .overlay .overlay-item:hover {
   color: rgb(187, 180, 174);
-  scale: 1.15;
+}
+.header .menu,
+.header .buttons {
+  display: none;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .header {
-    flex-wrap: nowrap;
-    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
   }
+  .header .burger {
+    display: none;
+  }
+  .header .menu,
   .header .buttons {
-    width: auto;
-    margin-top: 0;
-  }
-  .header .menu-btn {
-    flex: none;
+    display: flex;
+    gap: 2rem;
   }
 }/*# sourceMappingURL=main.css.map */
