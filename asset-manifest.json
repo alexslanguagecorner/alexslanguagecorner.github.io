@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.d7838942.css",
-    "main.js": "/static/js/main.5e73c40e.js",
+    "main.css": "/static/css/main.b0f4823c.css",
+    "main.js": "/static/js/main.d824a504.js",
     "static/media/books-1280.png": "/static/media/books-1280.fffc53c2c12f7827ed0e.png",
     "static/media/dark-books.png": "/static/media/dark-books.7fb3dfde512a96636a84.png",
     "static/media/logo.png": "/static/media/logo.ac21242daebeca5d585c.png",
     "static/media/spinner.gif": "/static/media/spinner.11d9cde8ebaeadb07ba7.gif",
     "index.html": "/index.html",
-    "main.d7838942.css.map": "/static/css/main.d7838942.css.map",
-    "main.5e73c40e.js.map": "/static/js/main.5e73c40e.js.map"
+    "main.b0f4823c.css.map": "/static/css/main.b0f4823c.css.map",
+    "main.d824a504.js.map": "/static/js/main.d824a504.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7838942.css",
-    "static/js/main.5e73c40e.js"
+    "static/css/main.b0f4823c.css",
+    "static/js/main.d824a504.js"
   ]
 }
