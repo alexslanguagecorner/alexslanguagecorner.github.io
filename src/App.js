@@ -17,7 +17,7 @@ function App() {
   const [filteredItems, setFilteredItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [query, setQuery] = useState("");
-
+  /* Move to its componets scss file */
   useEffect(() => {
     const fetchItems = async () => {
       const result = await axios(

@@ -1,3 +1,140 @@
 @import "config";
 @import "../components/ui/Search";
 @import "../components/ui/Header";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: rgb(231, 216, 186);
+  font-family: "Cormorant", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 100vh;
+  width: 100vw;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 100vw;
+  position: relative;
+  margin: auto;
+  padding: 0;
+  font-family: "Cormorant", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  a {
+    text-decoration: none;
+  }
+
+  .btn {
+    display: inline-block;
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+    padding: 10px 15px;
+    border: 0;
+    margin: 10px 0;
+  }
+
+  .hero-section {
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: row;
+    justify-content: space-between; /* MainTitle left, ContentMenu right */
+    align-items: center; /* Vertically align if needed */
+    width: 100%;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1980px) {
+  body {
+    background: url("../img/books-1280.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .voc-search-title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 880px) {
+  body {
+    background: url("../img/dark-books.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .hero-card {
+    height: 13rem;
+    width: 2rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  body {
+    background: url("../img/books-1280.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    .hero-section {
+      flex-direction: column;
+      justify-content: center !important;
+    }
+  }
+
+  /* Move to its componets scss file */
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .voc-search-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 575px) {
+  /* Move to its componets scss file */
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+  }
+
+  .voc-search-title {
+    font-size: 24px;
+  }
+}

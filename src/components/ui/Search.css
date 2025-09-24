@@ -1,6 +1,7 @@
-.search { /* Safari */
+.search {
+  overflow-x: hidden; /* Safari */
   position: sticky;
-  top: 0;
+  top: 85vh;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   display: flex;
@@ -11,11 +12,15 @@
 .search form {
   padding-bottom: 0.5rem;
   position: relative;
+  display: flex;
+  flex-direction: row;
   height: 100%;
 }
 .search form .accent-buttons {
   padding-bottom: 0.5rem;
   margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
   align-items: center;

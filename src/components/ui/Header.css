@@ -1,6 +1,7 @@
 .header {
   position: sticky;
-  top: 0;
+  position: -webkit-sticky; /* Safari */
+  top: 15px;
   z-index: 100;
   width: 100%;
   display: flex;

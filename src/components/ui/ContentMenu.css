@@ -29,7 +29,8 @@
 /* Media Queries */
 @media (max-width: 880px) {
   .content-menu-container {
-    padding-right: 0;
+    display: flex;
+    flex-direction: column;
   }
   .content-menu-container .content-menu-right .hero-card,
   .content-menu-container .content-menu-left .hero-card {
@@ -43,6 +44,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-right: 0;
   }
   .content-menu-container .content-menu-left,
   .content-menu-container .content-menu-right {
