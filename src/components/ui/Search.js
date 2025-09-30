@@ -70,18 +70,21 @@ const Search = ({ getQuery, allExpressions }) => {
             </div>
           ))}
         </div>
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Search expressions..."
-          value={text}
-          onChange={(e) => onChange(e.target.value)}
-          autoFocus
-        />
-        <Autocomplete
-          suggestions={suggestions}
-          onSelect={handleSelectSuggestion}
-        />
+        <div className="autocomplete-container">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Search expressions..."
+            value={text}
+            onChange={(e) => onChange(e.target.value)}
+            autoFocus
+          />
+
+          <Autocomplete
+            suggestions={suggestions}
+            onSelect={handleSelectSuggestion}
+          />
+        </div>
       </form>
     </section>
   );

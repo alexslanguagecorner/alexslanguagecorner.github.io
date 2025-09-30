@@ -39,6 +39,9 @@ body {
   font-family: "Cormorant", sans-serif;
   font-weight: 400;
   font-style: normal;
+  .voc-search-title {
+    text-align: center;
+  }
 
   a {
     text-decoration: none;
@@ -58,7 +61,7 @@ body {
     display: flex;
     overflow-x: hidden;
     flex-direction: row;
-    justify-content: space-between; /* MainTitle left, ContentMenu right */
+    justify-content: space-evenly; /* MainTitle left, ContentMenu right */
     align-items: center; /* Vertically align if needed */
     width: 100%;
   }

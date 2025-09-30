@@ -1,29 +1,34 @@
-.search { /* Safari */
+.search {
+  overflow-x: hidden; /* Safari */
   position: sticky;
-  top: 0;
+  top: calc(100vh - 100px);
   padding: 0.5rem 1rem;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   background: linear-gradient(-45deg, rgba(44, 32, 23, 0.2), rgba(131, 107, 89, 0.2));
-  z-index: 1000;
+  z-index: 200;
 }
 .search form {
   padding-bottom: 0.5rem;
   position: relative;
+  display: flex;
+  flex-direction: row;
   height: 100%;
 }
 .search form .accent-buttons {
-  padding-bottom: 0.5rem;
-  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .search form .accent-buttons .accent-button-outside {
-  height: 100%;
   background-color: transparent;
   margin-right: 5px;
+  margin-bottom: 2.5px;
+  margin-top: 2.5px;
   border-radius: 5px;
   z-index: -1;
 }
@@ -36,7 +41,7 @@
   cursor: pointer;
 }
 .search form .form-control {
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(187, 180, 174, 0.02));
+  background: rgba(187, 180, 174, 0.7);
 }
 .search form input[type=text] {
   display: block;
@@ -48,7 +53,10 @@
   margin: auto;
   outline: none;
 }
-.search form .autocomplete-list {
+.search form .autocomplete-container {
+  position: relative;
+}
+.search form .autocomplete-container .autocomplete-list {
   display: block;
   width: 60%;
   margin: auto;
@@ -59,21 +67,22 @@
   border-radius: 5px;
   position: absolute;
   max-height: 200px;
-  overflow-y: hidden;
-  z-index: 5000;
+  z-index: 500;
 }
-.search form .autocomplete-list li {
+.search form .autocomplete-container .autocomplete-list li {
   padding: 8px;
   cursor: pointer;
   z-index: 5001;
 }
-.search form .autocomplete-list li:hover {
+.search form .autocomplete-container .autocomplete-list li:hover {
   background-color: #f0f0f0;
 }
 
+/* Media Queries */
 .header {
   position: sticky;
-  top: 0;
+  position: -webkit-sticky; /* Safari */
+  top: 15px;
   z-index: 100;
   width: 100%;
   display: flex;
@@ -220,6 +229,9 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+.container .voc-search-title {
+  text-align: center;
+}
 .container a {
   text-decoration: none;
 }
@@ -236,7 +248,7 @@ body {
   display: flex;
   overflow-x: hidden;
   flex-direction: row;
-  justify-content: space-between; /* MainTitle left, ContentMenu right */
+  justify-content: space-evenly; /* MainTitle left, ContentMenu right */
   align-items: center; /* Vertically align if needed */
   width: 100%;
 }
