@@ -11,6 +11,7 @@ import FlashcardGrid from "./components/flashcards/FlashcardGrid";
 import Search from "./components/ui/Search";
 import "./App.css";
 import "./scss/main.scss";
+import SentenceSetup from "./components/games/SentenceSetup";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -86,6 +87,7 @@ function App() {
             path="/letter-soup"
             element={<LetterSoupSetup items={items} />}
           />
+          <Route path="/word-soup" element={<SentenceSetup items={items} />} />
         </Routes>
       </div>
     </Router>
@@ -94,6 +96,5 @@ function App() {
 
 export default App;
 
-function normalizeString(str) {
-  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "") ?? "";
-}
+const normalizeString = (str = "") =>
+  str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");

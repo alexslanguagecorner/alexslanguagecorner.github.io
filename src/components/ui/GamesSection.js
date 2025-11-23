@@ -24,6 +24,10 @@ const GamesSection = () => {
             This game and other ones are coming soon.
           </p>
         </Link>
+        <Link to="/word-soup" className="gm-card hero-card">
+          <h3>Word Soup</h3>
+          <p> Learn sentence structure by arranging a mix of words.</p>
+        </Link>
       </div>
       <div className="sub-about"></div>
     </div>

@@ -1,8 +1,8 @@
-import React from "react";
+import "./FlashcardItem.scss";
 
 function FlashcardItem({ item }) {
   return (
-    <div className="card">
+    <div className="card vocabulary-card">
       <div className="card-inner">
         <div className="card-front">
           <h1>{item.french_expression}</h1>

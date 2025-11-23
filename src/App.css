@@ -26,6 +26,7 @@
 /*Vocabulary Cards*/
 .cards {
   display: grid;
+  place-items: center;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }

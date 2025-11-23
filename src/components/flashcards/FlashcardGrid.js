@@ -1,5 +1,6 @@
 import React from "react";
 import FlashcardItem from "./FlashcardItem";
+import "./FlashcardGrid.scss";
 import Spinner from "../ui/Spinner";
 
 const FlashcardGrid = ({ items, isLoading }) => {

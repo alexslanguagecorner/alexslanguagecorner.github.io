@@ -1,0 +1,114 @@
+.sentence-setup-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.sentence-setup-container h2 {
+  padding: 2rem 3.5rem;
+  margin-top: 5rem;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  font-weight: 400;
+  background-color: rgba(35, 35, 35, 0.29);
+  /* frosted / sanded effect */
+  -webkit-backdrop-filter: sepia(60%);
+  backdrop-filter: sepia(60%);
+}
+.sentence-setup-container .selection-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  letter-spacing: 0.7px;
+  /* background - grained */
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  border: 1px black solid;
+  -webkit-backdrop-filter: sepia(60%);
+  backdrop-filter: sepia(60%);
+  /* hover: brighter gold */
+  /* focus: glowing outline */
+  /* active: pressed down effect */
+}
+.sentence-setup-container .selection-container .mode-select label {
+  display: inline-block;
+  padding: 1rem;
+  /* remove the browser's focus ring */
+}
+.sentence-setup-container .selection-container .mode-select label span {
+  font-size: 1.2rem;
+}
+.sentence-setup-container .selection-container .mode-select label input[type=radio] {
+  appearance: none; /* remove default */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 15px;
+  height: 15px;
+  margin-right: 1rem;
+  border: 2px solid #010101;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+}
+.sentence-setup-container .selection-container .mode-select label input[type=radio]:active,
+.sentence-setup-container .selection-container .mode-select label input[type=radio]:checked {
+  border-color: rgb(183, 183, 151);
+}
+.sentence-setup-container .selection-container .mode-select label input[type=radio]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(160, 141, 81, 0.6); /* optional custom focus glow */
+}
+.sentence-setup-container .selection-container .subject-select label {
+  display: inline-block;
+  padding: 0 1rem;
+  margin-top: 1rem 0 0.5rem 0;
+}
+.sentence-setup-container .selection-container .subject-select select {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background: rgba(20, 20, 20, 0.45);
+  color: #afafa8;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+}
+.sentence-setup-container .selection-container .start-btn {
+  padding: 0.35rem 1.4rem;
+  margin: 0.75rem;
+  border: 2px solid rgba(0, 0, 0, 0.7); /* soft gold border */
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.35);
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  /* frosted plaque effect */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+.sentence-setup-container .selection-container .start-btn:hover {
+  border-color: gold;
+  color: #fffbe6;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+.sentence-setup-container .selection-container .start-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.5), 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.sentence-setup-container .selection-container .start-btn:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6) inset;
+  background-color: rgba(0, 0, 0, 0.45);
+}/*# sourceMappingURL=SentenceSetup.css.map */
