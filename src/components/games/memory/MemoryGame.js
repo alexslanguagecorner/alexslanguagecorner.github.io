@@ -158,7 +158,7 @@ function MemoryGame() {
         {board.map((card) => (
           <div
             key={card.id}
-            className={`card ${
+            className={`card memory-card ${
               flipped.includes(card.id) || matched.includes(card.id)
                 ? "flipped"
                 : ""
