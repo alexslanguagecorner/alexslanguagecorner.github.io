@@ -7,7 +7,7 @@ const FlashcardGrid = ({ items, isLoading }) => {
   return isLoading ? (
     <Spinner />
   ) : (
-    <section className="cards">
+    <section className="cards" id="cards">
       {console.log(items)}
       {items.map((item) => (
         <FlashcardItem key={item.id} item={item}></FlashcardItem>

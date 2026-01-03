@@ -1,0 +1,15 @@
+.cards {
+  margin: 0 2rem;
+  background-color: aqua;
+}
+
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=FlashcardGrid.css.map */
