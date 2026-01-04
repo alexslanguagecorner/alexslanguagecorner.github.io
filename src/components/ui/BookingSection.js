@@ -137,14 +137,137 @@ const BookingSection = () => {
                   <button 
                   key={time}
                   onClick={() => setSelectedTime(time)}
-                  className=
-                  ></button>
+                  className={`time-slot ${selectedTime === time ? "selected" : ""}`}
+                  >
+                    {time}
+                  </button>
                 ))}
               </div>
             </div>
           )}
+
+          {/* Types of Classes */}
+          <div className="booking-card">
+            <h3>Choose Meeting Type</h3>
+            {lessonTypes.map(lesson => (
+              <button
+                key={lesson.id}
+                onClick={() => setSelectedType(lesson.id)}
+                className={`lesson-card ${selectedType === lesson.id ? "selected" : ""}`}
+              >
+                <div className="lesson-header">
+                  <strong>{lesson.name}</strong>
+                  <span className="lesson-price">${lesson.price}</span>
+                </div>
+                <p className="lesson-description">{lesson.description}</p>
+                <span className="lesson-duration">{lesson.duration}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Payments */}
+          <div className="booking-card">
+            <h3>Payment Method</h3>
+            {paymentMethods.map(method => (
+              <button
+                key = {method.id}
+                onClick={() => setSelectedPayment(method.id)}
+                className={`payment-option ${selectedPayment === method.id ? "selected" : ""}`}
+              >
+                <span>{method.name}</span>
+                <div className={`radio-circle ${selectedPayment === method.id ? "checked" : ""}`} />
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Summary */}
+        <div className="booking-right">
+          <div className="booking-card summary-card">
+            <h3>Booking Summary</h3>
+
+            <div className="teacher-summary">
+              <div className="teacher-summary-header">
+                <img src={myProfile.avatar} alt={myProfile.name} className="summary-avatar" />
+                <div>
+                  <strong>{myProfile.name}</strong>
+                  <div className="summary-rating"> * {myProfile.rating} ({myProfile.reviews} reviews)</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="summary-item">
+              <span>Date</span>
+              <span>{selectedDate ? format(selectedDate, "MMM d, yyy") : "—"}</span>  
+            </div>
+            <div className="summary-item">
+              <span>Time</span>
+              <span>{selectedTime || "—"}</span>  
+            </div>
+            <div className="summary-item">
+              <span>Lesson Type</span>
+              <span>{selectedType ? (lessonTypes.find(l => l.id === selectedType) || {name: "—"}).name : "—"}</span>  
+            </div>
+            <div className="summary-item">
+              <span>Duration</span>
+              <span>{selectedType ? (lessonTypes.find(l => l.id === selectedType) || {duration: "—"}).duration : "—"}</span>  
+            </div>
+            <div className="summary-item">
+              <span>Payment</span>
+              <span>{selectedPayment ? 
+                (paymentMethods.find(p => p.id === selectedPayment) || {name: "—"}).name : "—"}</span>
+            </div>
+
+            <div className="summary-total">
+              <div className="total-row">
+                <span>
+                  {selectedType ? (lessonTypes.find(l => l.id === selectedType) || {name: "Lesson"}).name : "Lesson"}
+                </span>
+                <span>€{price}.00</span>
+              </div>
+              <div className="total-row total-final">
+                <span>Total</span>
+                <span>€{price}.00</span>
+              </div>
+            </div>
+
+            {/* Calendly Button */}
+            <button 
+              onClick={handleOpenCalendly}
+              disabled={!isComplete}
+              className={`confirm-button ${isComplete ? "" : "disabled"}`}
+            >
+              {isComplete ? "Schedule Your Lesson" : "Complete all fields"}
+            </button>
+
+            <p className="calendly-note">
+              You'll be redirected to my Calendly to confirm your time slot.
+            </p>
+          </div>
         </div>
       </div>
+
+      {/* Calendly Modal */}
+      {isCalendlyOpen && (
+        <PopupModal
+          url={myProfile.calendlyUrl}
+          prefill={{
+            date: formatDateForCalendly(selectedDate, selectedTime),
+            name: "Student Name", // will be provided by the form
+            email: "", // possible to add email field
+            customAnswers: {
+              a1: `Lesson Type: ${lessonTypes.find(l => l.id === selectedType).name}`,
+              a2: `Duration: ${lessonTypes.find(l => l.id === selectedType).duration}`,
+              a3: `Selected Time: ${selectedDate ? format(selectedDate, "MMM d, yyyy") : ""} ${selectedTime || ""}`
+            }
+          }}
+          onModalClose={() => setIsCalendlyOpen(false)}
+          open={isCalendlyOpen}
+          rootElement={document.getElementById("root")}
+        />
+      )}
     </section>
-  )
-}
+  );
+};
+
+export default BookingSection;

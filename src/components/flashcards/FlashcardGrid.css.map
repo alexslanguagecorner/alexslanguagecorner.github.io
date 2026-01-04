@@ -1,1 +1,1 @@
-{"version":3,"sources":["FlashcardGrid.scss","FlashcardGrid.css"],"names":[],"mappings":"AAEA;EACE,cAAA;EACA,sBAAA;ACDF;;ADIA;EACE;IACE,qCAAA;ECDF;AACF;ADIA;EACE;IACE,0BAAA;ECFF;AACF","file":"FlashcardGrid.css"}
+{"version":3,"sources":["FlashcardGrid.scss","FlashcardGrid.css"],"names":[],"mappings":"AAEA;EACE,cAAA;ACDF;;ADIA;EACE;IACE,qCAAA;ECDF;AACF;ADIA;EACE;IACE,0BAAA;ECFF;AACF","file":"FlashcardGrid.css"}
