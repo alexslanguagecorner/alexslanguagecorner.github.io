@@ -51,7 +51,7 @@ const BookingSection = () => {
   const days = eachDayOfInterval({ start: monthStart, end: monthEnd });
   const paddingDays = Array(monthStart.getDay()).fill(null);
 
-  const isDateAvailable = (date) => >= addDays(new Date(), 1);
+  const isDateAvailable = (date) => () >= addDays(new Date(), 1);
   const isComplete = selectedDate && selectedTime && selectedType && selectedPayment;
 
   const price = selectedType ? (lessonTypes.find(l => l.id === selectedType) || {price: 0}).price : 0;

@@ -12,6 +12,7 @@ import Search from "./components/ui/Search";
 import "./App.css";
 import "./scss/main.scss";
 import SentenceSetup from "./components/games/SentenceSetup";
+import BookingSection from "./components/ui/BookingSection";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -68,6 +69,9 @@ function App() {
                 </div>
                 <div>
                   <GamesSection />
+                </div>
+                <div>
+                  <BookingSection />
                 </div>
                 <h1 className="voc-search-title caveat-big">
                   Vocabulary Search
