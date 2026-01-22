@@ -20,7 +20,7 @@ const GamesSection = () => {
           <h3>Letter Soup</h3>
           <p>
             {/*Relax by practicing vocabulary while sipping your favourite
-            bavarage.*/}
+            bavarage.*/} 
             This game and other ones are coming soon.
           </p>
         </Link>

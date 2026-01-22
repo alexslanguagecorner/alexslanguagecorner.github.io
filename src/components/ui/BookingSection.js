@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { format, addMonths, subMonths, startOfMonth, endOfMonth, eachDayOfInterval, isSameDay, isToday, addDays} from "date-fns";
+import { format, addMonths, subMonths, startOfMonth, endOfMonth, eachDayOfInterval, isSameDay, isToday, startOfDay, addDays} from "date-fns";
 import { PopupModal } from "react-calendly";
+import BuyLessonsRevolut from "./BuyLessonsRevolut";
 
 const timeSlots = [
   "08:00",  "08:20",  "08:40",  "09:00",  "09:20",  "09:40",  "10:00",  "10:20",  "10:40",  "11:00",  
@@ -10,7 +11,7 @@ const timeSlots = [
 ];
 
 const myProfile = {
-  name: "Alex Khan",
+  name: "Alex",
   avatar: "",
   languages: ["English", "French"],
   rating: 4.9,
@@ -51,7 +52,7 @@ const BookingSection = () => {
   const days = eachDayOfInterval({ start: monthStart, end: monthEnd });
   const paddingDays = Array(monthStart.getDay()).fill(null);
 
-  const isDateAvailable = (date) => () >= addDays(new Date(), 1);
+  const isDateAvailable = (date) => date >= startOfDay(addDays(new Date(), 1));
   const isComplete = selectedDate && selectedTime && selectedType && selectedPayment;
 
   const price = selectedType ? (lessonTypes.find(l => l.id === selectedType) || {price: 0}).price : 0;
@@ -69,8 +70,9 @@ const BookingSection = () => {
   };
 
   return (
-    <section className="booking-section">
-      <div className="booking-grid">
+    <section id="booking-section" className="booking-section">
+      <BuyLessonsRevolut />
+{/*    <div className="booking-grid">
         <div className="booking-left">
           <div className="booking-card teacher-info-card">
             <h3>Alex</h3>
@@ -93,9 +95,9 @@ const BookingSection = () => {
                 </p>
               </div>  
             </div>  
-          </div>
+          </div> 
 
-          {/* Calendar */}
+         
           <div className="booking-card">
             <div className="calendar-header">
               <h3>{format(currentMonth, "MMMM yyyy")}</h3>
@@ -128,7 +130,6 @@ const BookingSection = () => {
             </div>
           </div>  
 
-          {/* Hours */}
           {selectedDate && (
             <div className="booking-card">
               <h3>Select Time</h3>
@@ -146,7 +147,6 @@ const BookingSection = () => {
             </div>
           )}
 
-          {/* Types of Classes */}
           <div className="booking-card">
             <h3>Choose Meeting Type</h3>
             {lessonTypes.map(lesson => (
@@ -165,7 +165,6 @@ const BookingSection = () => {
             ))}
           </div>
 
-          {/* Payments */}
           <div className="booking-card">
             <h3>Payment Method</h3>
             {paymentMethods.map(method => (
@@ -181,7 +180,6 @@ const BookingSection = () => {
           </div>
         </div>
 
-        {/* Summary */}
         <div className="booking-right">
           <div className="booking-card summary-card">
             <h3>Booking Summary</h3>
@@ -231,7 +229,6 @@ const BookingSection = () => {
               </div>
             </div>
 
-            {/* Calendly Button */}
             <button 
               onClick={handleOpenCalendly}
               disabled={!isComplete}
@@ -245,7 +242,7 @@ const BookingSection = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div>*/}
 
       {/* Calendly Modal */}
       {isCalendlyOpen && (

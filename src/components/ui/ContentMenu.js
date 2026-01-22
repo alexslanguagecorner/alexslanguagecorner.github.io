@@ -1,8 +1,5 @@
 import React from "react";
-import BuyLessonsRevolut from "./BuyLessonsRevolut";
-
 import "./ContentMenu.scss";
-
 
 const ContentMenu = () => {
   return (
@@ -10,14 +7,15 @@ const ContentMenu = () => {
       <div className="content-menu-left">
         <div 
           onClick={() => {
-            document.getElementById
+            document.getElementById("booking-section")
+            ?.scrollIntoView({ behavior: "smooth" });
           }}
         className="content-top-left hero-card">
           <h3>Begin Your Journey</h3>
-          <a href="#buy-lessons-revolut">
+          <p>
             Book a lesson at your convenience and take the first step towards
             fluency.
-          </a>
+          </p>
           
         </div>
         <div

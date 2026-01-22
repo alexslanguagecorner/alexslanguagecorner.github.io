@@ -1,0 +1,39 @@
+.contact-section {
+  height: 100vh;
+}
+.contact-section .contact-tagline {
+  padding: 4rem 1rem 1rem 1rem;
+  text-align: center;
+}
+.contact-section .contact-tagline h2, .contact-section .contact-tagline h3 {
+  padding: 1rem;
+}
+.contact-section .contact-menu {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.contact-section .contact-menu .contact-card {
+  height: 12rem;
+  width: 18rem;
+  padding: 1rem;
+  background-color: rgba(231, 216, 186, 0.8);
+  margin: 0.5rem;
+  border-radius: 5px;
+  color: #473a3d;
+}
+.contact-section .contact-menu .contact-card a, .contact-section .contact-menu .contact-card h3 {
+  display: block;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+.contact-section .contact-menu .contact-card a, .contact-section .contact-menu .contact-card p {
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  color: #473a3d;
+}/*# sourceMappingURL=ContactSection.css.map */

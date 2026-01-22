@@ -11,7 +11,7 @@
 }
 .content-menu-container .hero-card {
   height: 12rem;
-  width: 9rem;
+  width: 10rem;
   padding: 1rem;
   background-color: rgba(231, 216, 186, 0.8);
   margin: 0.5rem;
@@ -34,7 +34,7 @@
   }
   .content-menu-container .content-menu-right .hero-card,
   .content-menu-container .content-menu-left .hero-card {
-    width: 9rem;
+    width: 10rem;
     height: 13rem;
   }
 }

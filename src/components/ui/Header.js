@@ -9,12 +9,12 @@ const Header = () => {
 
   // single source of truth for menu items
   const menuItems = [
-    { label: "Home", href: "#" },
-    { label: "About Me", href: "#" },
-    { label: "Contact", href: "#" },
-    { label: "Book a Lesson", href: "#" },
-    { label: "Grammar Tips", href: "#" },
-    { label: "Vocabulary Search", href: "#" },
+    { label: "Home", href: "#", id: "hero-section" },
+    { label: "About Me", href: "#", id: "hero-section" },
+    { label: "Contact", href: "#", id: "contact-section" },
+    { label: "Book a Lesson", href: "#", id: "buy-lessons-revolut" },
+  //  { label: "Grammar Tips", href: "#" },
+    { label: "Vocabulary Search", href: "#", id: "vocabulary-search" },
   ];
 
   // split to keep a left / right desktop layout
@@ -37,12 +37,18 @@ const Header = () => {
 
   return (
     <header className="header">
-      {/* desktop left menu */}
+      
       <nav className="menu">
         {leftItems.map((it, i) => (
-          <a key={i} className="menu-btn" href={it.href}>
+          <div
+            onClick={() => {
+              document.getElementById(it.id)
+              ?.scrollIntoView({behavior: "smooth"});
+            }}
+            key={i} className="menu-btn" 
+          >
             {it.label}
-          </a>
+          </div>
         ))}
       </nav>
 
@@ -61,9 +67,15 @@ const Header = () => {
       {/* desktop right buttons */}
       <div className="buttons">
         {rightItems.map((it, i) => (
-          <a key={i} className="menu-btn" href={it.href}>
+          <div 
+            onClick={() => {
+              document.getElementById(it.id)
+              ?.scrollIntoView({behavior: "smooth"});
+            }}
+            key={i} className="menu-btn"
+          >
             {it.label}
-          </a>
+          </div>
         ))}
       </div>
 
@@ -80,9 +92,13 @@ const Header = () => {
             {menuItems.map((item, i) => {
               const fromLeft = i % 2 === 0;
               return (
-                <motion.a
+                <motion.div
+                  onClick={() => {
+                    setIsOpen(false);
+                    document.getElementById(item.id)
+                    ?.scrollIntoView({behavior: "smooth"});
+                  }}
                   key={item.label}
-                  href={item.href}
                   className="overlay-item"
                   initial={{ x: fromLeft ? "-100vw" : "100vw", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
@@ -92,10 +108,9 @@ const Header = () => {
                     delay: i * 0.2, // staggered effect
                     ease: "easeOut",
                   }}
-                  onClick={() => setIsOpen(false)}
                 >
                   {item.label}
-                </motion.a>
+                </motion.div>
               );
             })}
           </motion.nav>

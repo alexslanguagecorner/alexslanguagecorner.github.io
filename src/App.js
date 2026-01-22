@@ -13,6 +13,7 @@ import "./App.css";
 import "./scss/main.scss";
 import SentenceSetup from "./components/games/SentenceSetup";
 import BookingSection from "./components/ui/BookingSection";
+import ContactSection from "./components/ui/ContactSection";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -61,7 +62,7 @@ function App() {
             path="/"
             element={
               <>
-                <div className="hero-section">
+                <div className="hero-section" id="hero-section">
                   <div className="hero-left">
                     <MainTitle />
                   </div>
@@ -73,7 +74,8 @@ function App() {
                 <div>
                   <BookingSection />
                 </div>
-                <h1 className="voc-search-title caveat-big">
+                  <ContactSection />
+                <h1 className="voc-search-title caveat-big" id="vocabulary-search">
                   Vocabulary Search
                 </h1>
 

@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   height: 3.7rem;
-  padding: 0 2rem;
+  padding: 0 4rem;
   margin: 0;
 }
 .header .menu {
@@ -21,6 +21,7 @@
   text-decoration: none;
   font-size: 1rem;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 .header .menu-btn:hover {
   color: rgb(187, 180, 174);

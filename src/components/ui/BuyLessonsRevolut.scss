@@ -1,0 +1,74 @@
+@import "../../scss/config";
+
+//<div id="buy-lessons-revolut" className="buy-lessons-revolut">
+//            <h2>Book a Lesson</h2>
+//            <div className="plans">
+//                {plans.map((plan) => (
+//                    <a
+//                        key={plan.title}
+//                        href={plan.link}
+//                        target="_blank"
+//                        rel="noopener noreferrer"
+//                        className="buy-button"
+//                    >
+//                        {plan.title} - {plan.price}
+//                    </a>
+//                ))}
+//            </div>
+//        </div>
+
+.buy-lessons-revolut {
+  height: 100vh;
+
+  .revolut-tagline {
+    padding: 4rem 1rem 1rem 1rem;
+    text-align: center;
+  }
+
+  .plans {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+ 
+    .buy-revolut-card {
+      height: 12rem;
+      width: 11rem;
+      padding: 1rem;
+      background-color: rgba($light-beige, 0.8);
+      margin: 0.5rem;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      color: $dark-grey-brown;
+
+      .plan-title {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0.5rem 0;
+      }
+
+      .plan-price {
+        font-weight: 500;
+        text-align: center;
+        margin: 0.5rem;
+      }
+
+      .plan-save {
+        text-align: center;
+        padding: 0.7rem;
+        border: 1px solid;
+      }
+
+      .plan-duration {
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}
